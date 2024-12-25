@@ -1,0 +1,6 @@
+﻿services:
+  codeisbug.api:
+    image: codeisbug.api
+    build:
+      context: .
+      dockerfile: CodeIsBug.Api/Dockerfile
