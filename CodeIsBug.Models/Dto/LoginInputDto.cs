@@ -7,6 +7,7 @@ namespace CodeIsBug.Models.Dto;
 [Display(Description = "用户登录dto")]
 public class LoginInputDto
 {
+    
     /// <summary>
     /// 用户登录dto
     /// </summary>
