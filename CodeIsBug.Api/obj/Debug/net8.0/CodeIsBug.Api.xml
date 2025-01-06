@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeIsBug.Api</name>
+    </assembly>
+    <members>
+        <member name="T:CodeIsBug.Api.Controller.AccountController">
+            <summary>
+            用户账户控制器
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Api.Controller.AccountController.#ctor(CodeIsBug.Services.Service.UserService)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:CodeIsBug.Api.Controller.AccountController.Login(CodeIsBug.Models.Dto.LoginInputDto)">
+            <summary>
+            用户登录接口
+            </summary>
+            <param name="dto">用户登录dto</param>
+            <returns></returns>
+        </member>
+        <member name="P:CodeIsBug.Api.Filter.GlobalExceptionFilter.Order">
+            <summary>
+            最先执行
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Api.Filter.DisabledRequestRecordAttribute">
+            <summary>
+            禁用请求记录过滤器
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Api.Filter.RequestActionFilter">
+            <summary>
+            请求日志拦截
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Api.Middleware.CheckToken.Res207Async(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            登录后返回暂无权限
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

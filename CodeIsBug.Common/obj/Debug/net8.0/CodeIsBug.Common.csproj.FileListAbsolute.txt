@@ -1,0 +1,14 @@
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\bin\Debug\net8.0\CodeIsBug.Common.deps.json
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\bin\Debug\net8.0\CodeIsBug.Common.dll
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\bin\Debug\net8.0\CodeIsBug.Common.pdb
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\bin\Debug\net8.0\CodeIsBug.Common.xml
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.csproj.AssemblyReference.cache
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.AssemblyInfoInputs.cache
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.AssemblyInfo.cs
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.csproj.CoreCompileInputs.cache
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.dll
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\refint\CodeIsBug.Common.dll
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.xml
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\CodeIsBug.Common.pdb
+E:\GitProjectRepository\CodeIsBug\CodeIsBug.Common\obj\Debug\net8.0\ref\CodeIsBug.Common.dll

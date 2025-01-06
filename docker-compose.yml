@@ -1,0 +1,6 @@
+services:
+  codeisbug.api:
+    image: ${DOCKER_REGISTRY-}codeisbugapi
+    build:
+      context: .
+      dockerfile: CodeIsBug.Api/Dockerfile

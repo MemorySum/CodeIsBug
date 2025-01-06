@@ -1,0 +1,1481 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeIsBug.Common</name>
+    </assembly>
+    <members>
+        <member name="F:CodeIsBug.Common.App.ServiceProvider">
+            <summary>
+            应用服务
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Common.App.Configuration">
+            <summary>
+            全局配置构建器
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.App.Environment">
+            <summary>
+            获取Web主机环境
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.App.HttpContext">
+            <summary>
+            获取请求上下文
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.App.GetService``1">
+            <summary>
+            获取服务
+            最好只获取单例注入的服务
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.App.CatchOrDefault``1(System.Func{``0},``0)">
+            <summary>
+            处理获取对象异常问题
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="action">获取对象委托</param>
+            <param name="defaultValue">默认值</param>
+            <returns>T</returns>
+        </member>
+        <member name="T:CodeIsBug.Common.Attributes.PermissionAttribute">
+            <summary>
+            接口按钮特性，映射到按钮权限
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.APIResultsMvcBuilderExtensions.AddApiResult(Microsoft.Extensions.DependencyInjection.IMvcBuilder)">
+            <summary>
+            配置 API 统一返回结果
+            </summary>
+            <param name="builder"></param>
+            <param name="filterOrder">结果过滤器排序</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.APIResultsMvcBuilderExtensions.AddApiResult``1(Microsoft.Extensions.DependencyInjection.IMvcBuilder)">
+            <summary>
+            配置 API 统一返回结果
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="builder"></param>
+            <param name="filterOrder">结果过滤器排序</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.API_Resultss.Helper.ResultHelper.Exception207Bad(System.String,System.Object)">
+            <summary>
+            有错误提示
+            </summary>
+            <param name="message"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.CacheSetup.AddCacheSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册缓存服务，如有配置 Redis 则启用，没有则启用分布式内存缓存（DistributedMemoryCache）
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.Cache.ICacheService">
+            <summary>
+            缓存服务接口
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.Exists(System.String)">
+            <summary>
+            验证缓存项是否存在
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.Set``1(System.String,``0)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.SetAsync``1(System.String,``0)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.Set``1(System.String,``0,System.Int32)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.SetAsync``1(System.String,``0,System.Int32)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.Update``1(System.String,``0)">
+            <summary>
+            修改缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.UpdateAsync``1(System.String,``0)">
+            <summary>
+            修改缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.Get``1(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetAsync``1(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.MGet``1(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据多个key
+            批量获取缓存
+            </summary>
+            <param name="keys">缓存Keys</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.MGetAsync``1(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据多个key
+            批量获取缓存
+            </summary>
+            <param name="keys">缓存Keys</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreate``1(System.String,``0)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreateAsync``1(System.String,``0)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreate``1(System.String,``0,System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreateAsync``1(System.String,``0,System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreate``1(System.String,System.Func{``0})">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreate``1(System.String,System.Func{``0},System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.Tasks.Task{``0}},System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.Remove(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.Remove(System.String[])">
+            <summary>
+            批量删除缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.RemoveAsync(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.RemoveAsync(System.String[])">
+            <summary>
+            批量删除缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.RemoveByPattern(System.String)">
+            <summary>
+            删除匹配的缓存
+            例如：pattern=ai，删除key为ai开头缓存
+            </summary>
+            <param name="pattern">匹配key</param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.RemoveByPatternAsync(System.String)">
+            <summary>
+            删除匹配的缓存
+            例如：pattern=ai，删除key为ai开头缓存
+            </summary>
+            <param name="pattern">匹配key</param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetAllKeys">
+            <summary>
+            获取所有的缓存Key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.ICacheService.GetKeysByPatternAsync(System.String)">
+            <summary>
+            获取匹配的缓存键
+            例如：pattern=ai，获取key为ai开头的缓存键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.Exists(System.String)">
+            <summary>
+            是否存在
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.Get``1(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetAsync``1(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.MGet``1(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据多个key
+            批量获取缓存
+            </summary>
+            <param name="keys">缓存Keys</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.MGetAsync``1(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据多个key
+            批量获取缓存
+            </summary>
+            <param name="keys">缓存Keys</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreate``1(System.String,``0)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreate``1(System.String,System.Func{``0})">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreate``1(System.String,``0,System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreate``1(System.String,System.Func{``0},System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreateAsync``1(System.String,``0)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreateAsync``1(System.String,``0,System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.Tasks.Task{``0}},System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.Set``1(System.String,``0)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.Set``1(System.String,``0,System.Int32)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.SetAsync``1(System.String,``0)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.SetAsync``1(System.String,``0,System.Int32)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.Update``1(System.String,``0)">
+            <summary>
+            修改缓存值
+            删除原有的，添加新的
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.UpdateAsync``1(System.String,``0)">
+            <summary>
+            修改缓存值
+            删除原有的，添加新的
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.Remove(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.Remove(System.String[])">
+            <summary>
+            批量删除缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.RemoveAsync(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.RemoveAsync(System.String[])">
+            <summary>
+            批量删除缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.RemoveByPattern(System.String)">
+            <summary>
+            删除匹配的缓存
+            例如：pattern=ai，删除key为ai开头缓存
+            </summary>
+            <param name="pattern">匹配key</param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.RemoveByPatternAsync(System.String)">
+            <summary>
+            删除匹配的缓存
+            例如：pattern=ai，删除key为ai开头缓存
+            </summary>
+            <param name="pattern">匹配key</param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetAllKeys">
+             <summary>
+            获取所有缓存键
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.MemoryCacheService.GetKeysByPatternAsync(System.String)">
+            <summary>
+            获取匹配的缓存键
+            例如：pattern=ai，获取key为ai开头的缓存键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.Exists(System.String)">
+            <summary>
+            判断key是否存在
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.Remove(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.Remove(System.String[])">
+            <summary>
+            批量删除缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.RemoveAsync(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.RemoveAsync(System.String[])">
+            <summary>
+            批量删除缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.RemoveByPattern(System.String)">
+            <summary>
+            删除匹配的缓存
+            例如：pattern=ai，删除key为ai开头缓存
+            </summary>
+            <param name="pattern">匹配key</param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.RemoveByPatternAsync(System.String)">
+            <summary>
+            删除匹配的缓存
+            例如：pattern=ai，删除key为ai开头缓存
+            </summary>
+            <param name="pattern">匹配key</param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetAllKeys">
+            <summary>
+            获取所有缓存键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetKeysByPatternAsync(System.String)">
+            <summary>
+            获取匹配的缓存键
+            例如：pattern=ai，获取key为ai开头的缓存键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.Set``1(System.String,``0)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.SetAsync``1(System.String,``0)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.Set``1(System.String,``0,System.Int32)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.SetAsync``1(System.String,``0,System.Int32)">
+            <summary>
+            添加缓存
+            </summary>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.Update``1(System.String,``0)">
+            <summary>
+            修改缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.UpdateAsync``1(System.String,``0)">
+            <summary>
+            修改缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.Get``1(System.String)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetKeyString(System.String)">
+            <summary>
+            获取缓存对象string
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetAsync``1(System.String)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key">缓存Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.MGet``1(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据多个key
+            批量获取缓存
+            </summary>
+            <param name="keys">缓存Keys</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.MGetAsync``1(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据多个key
+            批量获取缓存
+            </summary>
+            <param name="keys">缓存Keys</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreate``1(System.String,``0)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreateAsync``1(System.String,``0)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreate``1(System.String,``0,System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreateAsync``1(System.String,``0,System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="value">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreate``1(System.String,System.Func{``0})">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreate``1(System.String,System.Func{``0},System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Cache.RedisCacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.Tasks.Task{``0}},System.Int32)">
+            <summary>
+            获取缓存
+            没有获取到就创建新的缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">缓存Key</param>
+            <param name="create">缓存Value</param>
+            <param name="timeoutSeconds">缓存时长(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Configuration.AppSettings.AddConfigSteup(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            设置 Configuration 的实例
+            </summary>
+            <param name="configuration"></param>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="P:CodeIsBug.Common.Components.Configuration.AppSettings.AllowCors">
+            <summary>
+            允许跨域请求列表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Components.Configuration.AppSettings.IsDemo">
+            <summary>
+            是否演示环境
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Components.Configuration.AppSettings.DisplaySwaggerDoc">
+            <summary>
+            是否展示swaggeer文档
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Components.Configuration.AppSettings.ConnectionString">
+            <summary>
+            数据库链接
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Components.Configuration.AppSettings.RabbitMqConnetion">
+            <summary>
+            RabbitMq链接
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.Configuration.AppSettings.Jwt">
+            <summary>
+            Jwt 配置
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.Configuration.AppSettings.Redis">
+            <summary>
+            Redis 配置
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.DependencyInjection.AutofacModuleRegister">
+            <summary>
+            autofac注入
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.DependencyInjection.AutofacModuleRegister.Load(Autofac.ContainerBuilder)">
+            <summary>
+            加载程序集
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.JsonOptions.SystemTextJson.DateTimeJsonConverter">
+            <summary>
+            DateTime 格式转换
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Components.JsonOptions.SystemTextJson.DateTimeJsonConverter.Format">
+            <summary>
+            DateTime 格式
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.JsonOptions.SystemTextJson.DateTimeJsonConverter.#ctor(System.String)">
+            <summary>
+            DateTime 格式转换
+            </summary>
+            <param name="format">DateTime 格式</param>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.JsonOptions.SystemTextJson.EnumJsonConverter">
+            <summary>
+            Enum 转换
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.Jwt.JwtSetup">
+            <summary>
+            注入jwt
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.Jwt.JwtSetup.AddJwtSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            添加jwt认证
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:CodeIsBug.Common.Components.SqlSugar.SqlSugarSetup">
+            <summary>
+            注册sqlsuagr
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.SqlSugar.SqlSugarSetup.AddSqlSugar(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册SqlSugar
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Components.SqlSugar.SqlSugarSetup.GetSugarTableTypes">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Common.ApiResultException">
+            <summary>
+            返回统一结果的异常。
+            需要配合 AppResultActionFilter 使用。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:CodeIsBug.Common.ApiResultException.ApiResult">
+            <summary>
+            API 结果
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Common.Helper.AssemblyHelper">
+            <summary>
+            程序集帮助类
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.AssemblyHelper.GetAssemblies">
+            <summary>
+            获取项目程序集（排除系统程序集、NuGet包）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.AssemblyHelper.GetAssemblies(System.String[])">
+            <summary>
+            将程序集加载到 AssemblyLoadContext.Default 中，并且获取这个程序集。
+            （这个方法，主要是为了解决程序集没有被加载的情况）.
+            Load the assemblies into AssemblyLoadContext.Default, and get it.
+            </summary>
+            <param name="dllNames">程序集的名称，如：Test 或 Test.dll </param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.AssemblyHelper.GetAllowAnonymousEndpoints">
+            <summary>
+            获取所有特性的接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.AesUtil.Encrypt(CodeIsBug.Common.Helper.Encryption.AesUtil.AesModel)">
+            <summary>
+                AES加密
+            </summary>
+            <param name="aesModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.AesUtil.Decrypt(CodeIsBug.Common.Helper.Encryption.AesUtil.AesModel)">
+            <summary>
+                AES解密
+            </summary>
+            <param name="aesModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.AesUtil.Encrypt(System.String,System.String,System.String)">
+            <summary>
+                AES加密字符串
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <param name="iv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.AesUtil.Decrypt(System.String,System.String,System.String)">
+            <summary>
+                AES解密字符串
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <param name="iv"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.AesUtil.AesModel.Data">
+            <summary>
+                需要加密/解密的数据
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.AesUtil.AesModel.Key">
+            <summary>
+                密钥
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.AesUtil.AesModel.IV">
+            <summary>
+                向量
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.AesUtil.AesModel.Mode">
+            <summary>
+                加密模式
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.AesUtil.AesModel.Padding">
+            <summary>
+                填充模式
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.DesUtil.Encrypt(CodeIsBug.Common.Helper.Encryption.DesUtil.DesModel)">
+            <summary>
+                DES加密
+            </summary>
+            <param name="desModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.DesUtil.Decrypt(CodeIsBug.Common.Helper.Encryption.DesUtil.DesModel)">
+            <summary>
+                DES解密
+            </summary>
+            <param name="desModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.DesUtil.Encrypt(System.String,System.String,System.String)">
+            <summary>
+                DES加密字符串
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <param name="iv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.DesUtil.Decrypt(System.String,System.String,System.String)">
+            <summary>
+                DES解密字符串
+            </summary>
+            <param name="data"></param>
+            <param name="key"></param>
+            <param name="iv"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.DesUtil.DesModel.Data">
+            <summary>
+                需要加密/解密的数据
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.DesUtil.DesModel.Key">
+            <summary>
+                密钥
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.DesUtil.DesModel.IV">
+            <summary>
+                向量
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.DesUtil.DesModel.Mode">
+            <summary>
+                加密模式
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.DesUtil.DesModel.Padding">
+            <summary>
+                填充模式
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.RsaUtil.CreateKey">
+            <summary>
+                生成公钥和私钥
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.RsaUtil.Encrypt(CodeIsBug.Common.Helper.Encryption.RsaUtil.RsaModel)">
+            <summary>
+                RSA加密
+            </summary>
+            <param name="rsaModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.RsaUtil.Decrypt(CodeIsBug.Common.Helper.Encryption.RsaUtil.RsaModel)">
+            <summary>
+                RSA解密
+            </summary>
+            <param name="rsaModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.RsaUtil.Encrypt(System.String,System.String)">
+            <summary>
+                RSA加密字符串
+            </summary>
+            <param name="data">要加密的字符串</param>
+            <param name="key">公钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.Encryption.RsaUtil.Decrypt(System.String,System.String)">
+            <summary>
+                RSA解密字符串
+            </summary>
+            <param name="data">要解密的字符串</param>
+            <param name="key">私钥</param>
+            <returns></returns>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.RsaUtil.RsaKey.PublicKey">
+            <summary>
+                公钥
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.RsaUtil.RsaKey.PrivateKey">
+            <summary>
+                私钥
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.RsaUtil.RsaModel.Data">
+            <summary>
+                需要加密/解密的数据
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.Encryption.RsaUtil.RsaModel.Key">
+            <summary>
+                密钥(加密:公钥;解密:私钥)
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.HttpHelper.GetRequestUrlAddress(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            获取完整请求地址
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.HttpHelper.GetRequestIPv4(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取请求的ip4
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Common.Helper.IoFileHelper">
+            <summary>
+            创建文件帮助类
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.IoFileHelper.WriteAsync(System.String,System.String)">
+            <summary>
+            创建文件或者附加内容
+            </summary>
+            <param name="filePath">文件路径</param>
+            <param name="Data">要写入的文本</param> 
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.JsonHelper.ToDeserializeObject``1(System.String)">
+            <summary>
+            字符串序列化对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.JsonHelper.ToJson(System.Object)">
+            <summary>
+            对象转Json
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.JsonHelper.ToJson(System.Object,System.Boolean)">
+            <summary>
+            </summary>
+            <param name="obj"></param>
+            <param name="contractResolver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.JwtHelper.Create(System.Collections.Generic.Dictionary{System.String,System.String},System.Int32)">
+            <summary>
+            生成 JWT Token
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.ObjectHelper.IsEmpty(System.Object)">
+            <summary>
+            检查 Object 是否为 NULL
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Common.Helper.ServerInfoUtil">
+            <summary>
+            服务器信息工具类
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.CpuCount">
+            <summary>
+            CPU数量
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.MachineName">
+            <summary>
+            计算机名称
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.OSName">
+            <summary>
+            系统名称
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.OSArchitecture">
+            <summary>
+            系统架构
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.DoNetName">
+            <summary>
+            .Net版本名称
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.UseRam">
+            <summary>
+            占用内存
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.StartTime">
+            <summary>
+            服务开始运行时间
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.RunTime">
+            <summary>
+            服务运行时间
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.IP">
+            <summary>
+            ip
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.IsUnix">
+            <summary>
+            是否Unix系统
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.MemoryInfo">
+            <summary>
+            内存使用综合情况
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.ServerInfoUtil.DiskInfo">
+            <summary>
+            磁盘使用综合大小
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.ServerInfoUtil.GetWindowsMetrics">
+            <summary>
+            windows系统获取内存信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.ServerInfoUtil.GetUnixMetrics">
+            <summary>
+            Unix系统获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Common.Helper.MemoryInfo">
+            <summary>
+            内存信息
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.MemoryInfo.CPURate">
+            <summary>
+            CPU使用率%
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.MemoryInfo.TotalRAM">
+            <summary>
+            总内存 GB
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.MemoryInfo.RAMRate">
+            <summary>
+            内存使用率 %
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.MemoryInfo.FreeRam">
+            <summary>
+            空闲内存
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.MemoryInfo.AppRAMRate">
+            <summary>
+            APP内存使用率
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Common.Helper.DiskInfo">
+            <summary>
+            磁盘信息
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.DiskInfo.DiskName">
+            <summary>
+            磁盘的名称。
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.DiskInfo.TypeName">
+            <summary>
+            磁盘的类型。
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.DiskInfo.TotalFree">
+            <summary>
+            磁盘的剩余空间总量（字节）。
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.DiskInfo.TotalSize">
+            <summary>
+            磁盘的总大小（字节）。
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.DiskInfo.Used">
+            <summary>
+            磁盘已使用的空间量（字节）。
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.DiskInfo.AvailableFreeSpace">
+            <summary>
+            磁盘可使用的剩余空间（字节）。
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Helper.DiskInfo.AvailablePercent">
+            <summary>
+            磁盘剩余空间的百分比。
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.ShellUtil.Bash(System.String)">
+            <summary>
+            linux 系统命令
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.ShellUtil.Cmd(System.String,System.String)">
+            <summary>
+            windows系统命令
+            </summary>
+            <param name="fileName"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Helper.StringHelper.Md5Hash(System.String)">
+            <summary>
+                生成MD5加密字符串
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Common.Middleware.GlobalExceptionMiddleware">
+            <summary>
+            全局异常中间件
+            </summary>
+            <param name="next"></param>
+            <param name="logger"></param>
+            <param name="sqlSugarClient"></param>
+        </member>
+        <member name="M:CodeIsBug.Common.Middleware.GlobalExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{CodeIsBug.Common.Middleware.GlobalExceptionMiddleware},SqlSugar.ISqlSugarClient)">
+            <summary>
+            全局异常中间件
+            </summary>
+            <param name="next"></param>
+            <param name="logger"></param>
+            <param name="sqlSugarClient"></param>
+        </member>
+        <member name="T:CodeIsBug.Common.Model.Constant">
+            <summary>
+            系统存放所有常量的地方
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Common.Model.TokenData.ExpireTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Swagger.SwaggerExtension.UseSwaggerExtension(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            app.use
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.ITokenService.GenerateTokenAsync(CodeIsBug.Common.Model.TokenData)">
+            <summary>
+            生成token
+            </summary>
+            <param name="tokenData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.ITokenService.ValidateToken(System.String)">
+            <summary>
+            校验token
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.ITokenService.RefreshTokenAsync(System.String)">
+            <summary>
+            刷新token
+            </summary>
+            <param name="httpContext"></param>
+            <param name="tokenData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.ITokenService.ParseTokenAsync(System.String)">
+            <summary>
+            解析token
+            </summary>
+            <param name="httpContext"></param>
+            <param name="tokenData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.ITokenService.GetHeadersToken">
+            <summary>
+            获取请求头的Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.ITokenService.GetCurrentUserInfo">
+            <summary>
+            获取当前登录的用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:CodeIsBug.Common.Token.TokenService.expiresTime">
+            <summary>
+            60分钟内无操作
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Common.Token.TokenService.tokenTag">
+            <summary>
+            请求头的前缀
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.TokenService.GenerateTokenAsync(CodeIsBug.Common.Model.TokenData)">
+            <summary>
+            生成token
+            </summary>
+            <param name="tokenData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.TokenService.ValidateToken(System.String)">
+            <summary>
+            检查Token
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.TokenService.GetHeadersToken">
+            <summary>
+            获取heard的token
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+            <exception cref="T:System.SystemException"></exception>
+        </member>
+        <member name="M:CodeIsBug.Common.Token.TokenService.GetCurrentUserInfo">
+            <summary>
+            获取当前登录的用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DefaultPermissionChecker.IsGrantedAsync(System.Security.Claims.ClaimsPrincipal,System.String)">
+            <summary>
+            异步检查指定名称的权限是否已授予给指定用户主体。
+            </summary>
+            <param name="claimsPrincipal">用户主体。</param>
+            <param name="name">权限名称。</param>
+            <returns>表示异步操作的任务，任务结果为 true 表示权限已授予，否则为 false。</returns>
+        </member>
+        <member name="M:IPermissionChecker.IsGrantedAsync(System.Security.Claims.ClaimsPrincipal,System.String)">
+            <summary>
+            异步检查指定名称的权限是否已授予给指定用户主体。
+            </summary>
+            <param name="claimsPrincipal">用户主体。</param>
+            <param name="name">权限名称。</param>
+            <returns>表示异步操作的任务，任务结果为 true 表示权限已授予，否则为 false。</returns>
+        </member>
+        <member name="M:SimpleAuthorizationHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,SimpleAuthorizationRequirement)">
+            <summary>
+            处理满足简单授权需求的授权逻辑。
+            </summary>
+            <param name="context">授权上下文。</param>
+            <param name="requirement">授权需求。</param>
+        </member>
+        <member name="M:SimpleAuthorizationPolicyProvider.GetDefaultPolicyAsync">
+            <summary>
+            异步获取默认授权策略。
+            </summary>
+            <returns>默认授权策略。</returns>
+        </member>
+        <member name="M:SimpleAuthorizationPolicyProvider.GetPolicyAsync(System.String)">
+            <summary>
+            根据策略名称异步获取授权策略。
+            </summary>
+            <param name="policyName">策略名称。</param>
+            <returns>授权策略，如果未找到则返回 null。</returns>
+        </member>
+        <member name="M:CorsServiceCollectionExtensions.AddCorsSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions})">
+            <summary>
+            添加默认跨域配置
+            </summary>
+            <param name="services"></param>
+            <param name="setupAction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EnumHelper.GetDescriptions``1">
+            <summary>
+            获取枚举类型的所有值和它们的描述
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

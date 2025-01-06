@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeIsBug.Models</name>
+    </assembly>
+    <members>
+        <member name="T:CodeIsBug.Models.Admin.Dictionary">
+             <summary>
+             字典表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Dictionary.DictionaryTypeId">
+             <summary>
+             字典类型Id 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Dictionary.Name">
+             <summary>
+             名称 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Dictionary.Code">
+             <summary>
+             编码 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Dictionary.Value">
+             <summary>
+             字典值 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Dictionary.Description">
+             <summary>
+             描述 
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.DictionaryType">
+             <summary>
+             字典类型表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.DictionaryType.Name">
+             <summary>
+             名称 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.DictionaryType.Code">
+             <summary>
+             编码 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.DictionaryType.Description">
+             <summary>
+             描述 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.DictionaryType.Enabled">
+             <summary>
+             是否启用 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.DictionaryType.Sort">
+             <summary>
+             排序 
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.EBaseCity">
+             <summary>
+             省市信息表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.EBaseCity.PID">
+             <summary>
+              上级ID
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.EBaseCity.Level">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.EBaseCity.Name">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.EBaseCity.PinyinPrefix">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.EBaseCity.Pinyin">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.EBaseCity.FullId">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.EBaseCity.FullName">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.LoginLog">
+             <summary>
+             登录日志表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.NickName">
+             <summary>
+             昵称 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.IP">
+             <summary>
+             IP地址 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.Browser">
+             <summary>
+             浏览器 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.OS">
+             <summary>
+             系统 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.Device">
+             <summary>
+             设备 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.BrowserInfo">
+             <summary>
+             浏览器信息 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.ElapsedMilliseconds">
+             <summary>
+             登录耗时 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.LoginLog.Result">
+             <summary>
+             登录结果 
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.Permission">
+             <summary>
+             权限表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.ParentId">
+             <summary>
+             ParentId 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Label">
+             <summary>
+             权限名称 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Code">
+             <summary>
+             权限编码 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Type">
+             <summary>
+             权限类型 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Path">
+             <summary>
+             菜单访问地址 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Icon">
+             <summary>
+             图标 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Hidden">
+             <summary>
+             是否隐藏 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Enabled">
+             <summary>
+             是否启用 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Permission.Sort">
+             <summary>
+             排序 
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.Role">
+             <summary>
+             角色表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Role.Name">
+             <summary>
+             角色名称 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Role.Code">
+             <summary>
+             角色代码 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Role.Description">
+             <summary>
+             角色描述 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Role.Enabled">
+             <summary>
+             是否启用 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.Role.Sort">
+             <summary>
+             排序 
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.RolePermissionMap">
+             <summary>
+             角色权限对照表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.RolePermissionMap.RoleId">
+             <summary>
+             1 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.RolePermissionMap.PermissionId">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.User">
+             <summary>
+             用户表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.User.UserName">
+             <summary>
+             用户名 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.User.Password">
+             <summary>
+             密码 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.User.NickName">
+             <summary>
+             昵称 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.User.Avatar">
+             <summary>
+             头像 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.User.Status">
+             <summary>
+             状态 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.User.Remark">
+             <summary>
+             备注 
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Admin.UserRoleMap">
+             <summary>
+             用户角色对照表
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.UserRoleMap.UserId">
+             <summary>
+             1 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Admin.UserRoleMap.RoleId">
+             <summary>
+              
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Dto.LoginInputDto">
+            <summary>
+            用户登录dto
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Models.Dto.LoginInputDto.#ctor(System.String,System.String)">
+            <summary>
+            用户登录dto
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+        </member>
+        <member name="P:CodeIsBug.Models.Dto.LoginInputDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Dto.LoginInputDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Enums.BusinessType">
+            业务操作类型
+            0=其它,1=新增,2=修改,3=删除,4=授权,5=导出,6=导入
+            @author zrry
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.BusinessType.OTHER">
+            其它
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.BusinessType.INSERT">
+            新增
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.BusinessType.UPDATE">
+            修改
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.BusinessType.DELETE">
+            删除
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.BusinessType.GRANT">
+            授权
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.BusinessType.EXPORT">
+            导出
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.BusinessType.IMPORT">
+            导入
+        </member>
+        <member name="T:CodeIsBug.Models.Enums.PermissionType">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.PermissionType.Group">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.PermissionType.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.PermissionType.Dot">
+            <summary>
+            权限点
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Enums.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.Sex.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.Sex.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:CodeIsBug.Models.Enums.Sex.Female">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Models.Models.BaseModel">
+            <summary>
+            实体通用属性
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.Id">
+             <summary>
+             主键 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.Enabled">
+             <summary>
+             是否启用 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.Sort">
+             <summary>
+             排序 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.IsDelete">
+             <summary>
+             是否删除 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.LastModifyUserId">
+             <summary>
+             最后修改人ID 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.LastModifyTime">
+             <summary>
+             最后修改时间 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.CreateUserId">
+             <summary>
+             创建人ID 
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Models.Models.BaseModel.CreateTime">
+             <summary>
+             创建时间 
+            </summary>
+        </member>
+    </members>
+</doc>

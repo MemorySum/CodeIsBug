@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeIsBug.Api</name>
+    </assembly>
+    <members>
+        <member name="T:CodeIsBug.Api.Controller.AccountController">
+            <summary>
+            用户账户控制器
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Api.Controller.AccountController.#ctor(CodeIsBug.Service.Services.UserService)">
+            <summary>
+            /用户服务
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:CodeIsBug.Api.Controller.AccountController.Login(CodeIsBug.Models.Dto.LoginInputDto)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="loginInputDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Api.Controller.DbController">
+            <summary>
+            数据库控制器
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Api.Controller.DbController.#ctor(CodeIsBug.Service.Services.DbService)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dbService"></param>
+        </member>
+        <member name="M:CodeIsBug.Api.Controller.DbController.SyncDb">
+            <summary>
+            同步数据库
+            </summary>
+            
+        </member>
+        <member name="T:CodeIsBug.Api.Filter.GlobalExceptionFilter">
+            <summary>
+            全局异常过滤器
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Api.Filter.GlobalExceptionFilter.#ctor(Microsoft.Extensions.Logging.ILogger{CodeIsBug.Api.Filter.GlobalExceptionFilter},SqlSugar.ISqlSugarClient)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+            <param name="sugarClient"></param>
+        </member>
+        <member name="M:CodeIsBug.Api.Filter.GlobalExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:CodeIsBug.Api.Filter.GlobalExceptionFilter.Order">
+            <summary>
+            最先执行
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Api.Filter.DisabledRequestRecordAttribute">
+            <summary>
+            禁用请求记录过滤器
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Api.Filter.RequestActionFilter">
+            <summary>
+            请求日志拦截
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Api.Middleware.CheckToken.Res207Async(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            登录后返回暂无权限
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

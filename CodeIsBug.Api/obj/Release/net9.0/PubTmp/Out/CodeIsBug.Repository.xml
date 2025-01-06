@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeIsBug.Repository</name>
+    </assembly>
+    <members>
+        <member name="F:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1._db">
+            <summary>
+            初始化 SqlSugar 客户端
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Context">
+            <summary>
+            数据库上下文
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.EntityContext">
+            <summary>
+            独立数据库上下文
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Entities">
+            <summary>
+            实体集合
+            </summary>
+        </member>
+        <member name="P:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Ado">
+            <summary>
+            原生 Ado 对象
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.#ctor(SqlSugar.ISqlSugarClient)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取总数
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取总数
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            检查是否存在
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            检查是否存在
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Single(System.Object)">
+            <summary>
+            通过主键获取实体
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Single(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.SingleAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.SingleAsync(System.Object)">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.ToList">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.ToList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.ToList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},SqlSugar.OrderByType)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <param name="orderByExpression"></param>
+            <param name="orderByType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.ToListAsync">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.ToListAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.ToListAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},SqlSugar.OrderByType)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <param name="orderByExpression"></param>
+            <param name="orderByType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Insert(`0)">
+            <summary>
+            新增一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Insert(`0[])">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Insert(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertReturnIdentity(`0)">
+            <summary>
+            新增一条记录返回自增Id
+            </summary>
+            <param name="insertObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertReturnSnowflakeId(`0)">
+            <summary>
+            新增一条记录返回雪花Id
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertReturnEntity(`0)">
+            <summary>
+            新增一条记录返回实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertAsync(`0)">
+            <summary>
+            新增一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertAsync(`0[])">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertReturnIdentityAsync(`0)">
+            <summary>
+            新增一条记录返回自增Id
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertReturnSnowflakeIdAsync(`0)">
+            <summary>
+            新增一条记录返回雪花Id
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.InsertReturnEntityAsync(`0)">
+            <summary>
+            新增一条记录返回实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Update(`0)">
+            <summary>
+            更新一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Update(`0[])">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Update(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.UpdateAsync(`0)">
+            <summary>
+            更新一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Update(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,`0}})">
+            <summary>
+            更新记录
+            </summary>
+            <param name="predicate">更新的条件</param>
+            <param name="content">更新的内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.UpdateAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,`0}})">
+            <summary>
+            更新记录
+            </summary>
+            <param name="predicate">更新的条件</param>
+            <param name="content">更新的内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.UpdateAsync(`0[])">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.UpdateAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Delete(`0)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Delete(System.Object)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Delete(System.Object[])">
+            <summary>
+            删除多条记录
+            </summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            自定义条件删除记录
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.DeleteAsync(`0)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.DeleteAsync(System.Object)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.DeleteAsync(System.Object[])">
+            <summary>
+            删除多条记录
+            </summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            自定义条件删除记录
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式查询多条记录
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Where(System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式查询多条记录
+            </summary>
+            <param name="condition"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.AsQueryable">
+            <summary>
+            构建查询分析器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.AsQueryable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            构建查询分析器
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.AsEnumerable">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.AsEnumerable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.AsAsyncEnumerable">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.AsAsyncEnumerable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.Change``1">
+            <summary>
+            切换仓储(注意使用环境)
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <returns>仓储</returns>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.CurrentBeginTran">
+            <summary>
+            当前db
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.CurrentCommitTran">
+            <summary>
+            当前db
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.CurrentRollbackTran">
+            <summary>
+            当前db
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.BeginTran">
+            <summary>
+            所有db
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.CommitTran">
+            <summary>
+            所有db
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseSqlsugarRepository`1.RollbackTran">
+            <summary>
+            所有db
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Repository.Repository.RolePermissionMapRepository">
+            <summary>
+            角色权限对照表仓储
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.RolePermissionMapRepository.#ctor(SqlSugar.ISqlSugarClient)">
+            <summary>
+            角色权限对照表仓储
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.RolePermissionMapRepository.GetUserRolePermissionMap(System.Guid)">
+            <summary>
+            获取用户对应角色的权限清单
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Repository.Repository.UserRoleMapRepository">
+            <summary>
+            用户角色对照表仓储
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.UserRoleMapRepository.#ctor(SqlSugar.ISqlSugarClient)">
+            <summary>
+            用户角色对照表仓储
+            </summary>
+            <param name="db"></param>
+        </member>
+    </members>
+</doc>

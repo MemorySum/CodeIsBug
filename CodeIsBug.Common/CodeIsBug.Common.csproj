@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="8.1.1" />
+      <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+      <PackageReference Include="FreeRedis" Version="1.3.5" />
+      <PackageReference Include="FreeSql" Version="3.5.103-preview20241226" />
+      <PackageReference Include="FreeSql.Provider.MySqlConnector" Version="3.5.103-preview20241226" />
+      <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="2.1.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="9.0.0" />
+      <PackageReference Include="Microsoft.OpenApi" Version="1.6.22" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.2.0" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.0" />
+      <PackageReference Include="System.Linq.Dynamic.Core" Version="1.5.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CodeIsBug.Models\CodeIsBug.Models.csproj" />
+    </ItemGroup>
+
+</Project>

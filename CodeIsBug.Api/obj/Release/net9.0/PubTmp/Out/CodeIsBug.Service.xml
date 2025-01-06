@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeIsBug.Service</name>
+    </assembly>
+    <members>
+        <member name="T:CodeIsBug.Service.Services.UserService">
+            <summary>
+            用户service
+            </summary>
+            <param name="tokenService"></param>
+            <param name="userRepository"></param>
+            <param name="userRoleMapRepository"></param>
+            <param name="rolePermissionMapRepository"></param>
+        </member>
+        <member name="M:CodeIsBug.Service.Services.UserService.#ctor(CodeIsBug.Common.Token.ITokenService,CodeIsBug.Repository.Repository.UserRepository,CodeIsBug.Repository.Repository.UserRoleMapRepository,CodeIsBug.Repository.Repository.RolePermissionMapRepository)">
+            <summary>
+            用户service
+            </summary>
+            <param name="tokenService"></param>
+            <param name="userRepository"></param>
+            <param name="userRoleMapRepository"></param>
+            <param name="rolePermissionMapRepository"></param>
+        </member>
+        <member name="M:CodeIsBug.Service.Services.UserService.Login(CodeIsBug.Models.Dto.LoginInputDto)">
+            <summary>
+            登录功能
+            </summary>
+            <param name="loginInputDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeIsBug.Service.Services.UserService.GetUserInfo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

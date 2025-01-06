@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeIsBug.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:CodeIsBug.Repository.IRepository.BaseFreeSqlRepository`1">
+            <summary>
+            基础仓储
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:CodeIsBug.Repository.IRepository.BaseFreeSqlRepository`1._freeSql">
+            <summary>
+            初始化 FreeSql 客户端
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.IRepository.BaseFreeSqlRepository`1.#ctor(IFreeSql)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="freeSql"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.DBRepository.SyncDb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.DBRepository.InitDataAsync">
+            <summary>
+            初始化种子数据
+            </summary>
+        </member>
+        <member name="T:CodeIsBug.Repository.Repository.RolePermissionMapRepository">
+            <summary>
+            角色权限对照表仓储
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.RolePermissionMapRepository.#ctor(IFreeSql)">
+            <summary>
+            角色权限对照表仓储
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.RolePermissionMapRepository.GetUserRolePermissionMap(System.Guid)">
+            <summary>
+            获取用户对应角色的权限清单
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Repository.Repository.UserRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.UserRepository.#ctor(IFreeSql)">
+            <summary>
+            
+            </summary>
+            <param name="freeSql"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.UserRepository.LoginAsync(CodeIsBug.Models.Dto.LoginInputDto)">
+            <summary>
+            登录查询数据库账号
+            </summary>
+            <param name="loginInputDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeIsBug.Repository.Repository.UserRoleMapRepository">
+            <summary>
+            角色对照仓储
+            </summary>
+            <param name="freeSql"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.UserRoleMapRepository.#ctor(IFreeSql)">
+            <summary>
+            角色对照仓储
+            </summary>
+            <param name="freeSql"></param>
+        </member>
+        <member name="M:CodeIsBug.Repository.Repository.UserRoleMapRepository.GetUserRoleIdsAsync(System.Guid)">
+            <summary>
+            获取用户角色列表
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
