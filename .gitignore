@@ -1,0 +1,11 @@
+﻿/CodeIsBug.Api/bin/
+/.vs/CodeIsBug
+/CodeIsBug.Common/bin
+/CodeIsBug.Models/bin
+/CodeIsBug.Repository/bin
+/CodeIsBug.Service/bin
+/CodeIsBug.Service/obj
+/obj
+/.winget
+/CodeIsBug.sln.DotSettings.user
+/CodeIsBug.slnLaunch
